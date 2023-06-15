@@ -6,21 +6,10 @@ import Characters from '../components/Characters.astro'
 const pageTitle = "Bienvenido a Hogwarts"
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/logo_hogwarts.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{pageTitle}</title>
-	</head>
-	<body>
-		<HomePageLayout pageTitle={pageTitle}>
-			<HeroSection pageTitle={pageTitle} />
-			<main class="px-10 dark:bg-slate-800">
-				<About />
-				<Characters />
-			</main>
-		</HomePageLayout>
-	</body>
-</html>
+<HomePageLayout pageTitle={pageTitle}>
+	<HeroSection pageTitle={pageTitle} />
+	<main class="px-10 dark:bg-slate-800">
+		<About />
+		<Characters />
+	</main>
+</HomePageLayout>
